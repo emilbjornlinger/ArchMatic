@@ -28,6 +28,7 @@ PKGS=(
     'starship'              # Starship shell
     'ripgrep'               # Fuzzy file search
     'feh'                   # Image viewer
+    'less'                  # Needed for git diff
 
     # DEVELOPMENT ---------------------------------------------------------
 

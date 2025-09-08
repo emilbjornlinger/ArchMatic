@@ -14,8 +14,11 @@ echo "FINAL SETUP AND CONFIGURATION"
 
 # TO ADDRESS:
 echo "Write sway config, then add to chezmoi"
+echo "Include swaylock and swayidle config:"
+#exec swayidle -w
+#	timeout 300 'swaylock -f -c 000000'
+#	before-sleep 'swaylock -f -c 000000'
 echo "Write lemurs config, then add to chezmoi"
-# Power management config
 # Sound/bluetooth system config
 # Firewall config
 # Touchpad config
@@ -61,13 +64,37 @@ EOF
 sudo chmod 755 /etc/lemurs/wayland/sway
 # ------------------------------------------------------------------------
 
-#echo
-#echo "Setting laptop lid close to suspend CONFIGURE THIS"
-#
-#sudo sed -i -e 's|[# ]*HandleLidSwitch[ ]*=[ ]*.*|HandleLidSwitch=suspend|g' /etc/systemd/logind.conf
-#
-## ------------------------------------------------------------------------
-#
+echo
+echo "TODO: Add power saving configurations"
+
+# ------------------------------------------------------------------------
+
+echo
+echo "Enable pipewire user services"
+
+systemctl --user enable --now pipewire pipewire-pulse wireplumber
+
+# ------------------------------------------------------------------------
+
+sudo cat <<EOF > $HOME/.asoundrc
+pcm.!default {
+    type pulse
+}
+
+ctl.!default {
+    type pulse
+}
+EOF
+
+# ------------------------------------------------------------------------
+
+echo
+echo "Enable bluetooth service"
+
+sudo systemctl enable --now bluetooth
+
+# ------------------------------------------------------------------------
+
 #echo
 #echo "Disabling Pulse .esd_auth module CHECK IF NEEDED"
 #

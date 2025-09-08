@@ -14,6 +14,7 @@ echo
 PKGS=(
         'sway'           # Sway
         'swaylock'       # Lock manager
+        'swayidle'       # Handle system events
         'swaybg'       	 # Set background
         'lemurs'       	 # Display manager
 )

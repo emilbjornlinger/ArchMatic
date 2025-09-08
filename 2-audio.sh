@@ -14,19 +14,15 @@ echo
 PKGS=(
         'alsa-utils'        # Advanced Linux Sound Architecture (ALSA) Components https://alsa.opensrc.org/
         'alsa-plugins'      # ALSA plugins
-        'pulseaudio'        # Pulse Audio sound components
-        'pulseaudio-alsa'   # ALSA configuration for pulse audio
-        'pavucontrol'       # Pulse Audio volume control
-        'volumeicon'        # System tray volume control
-
-        'bluez'                 # Daemons for the bluetooth protocol stack
+        'pipewire'     	    # Multimedia framework
+        'wireplumber'       # Session manager for pipewire
+        'pipewire-audio'    # Audio server
+        'pipewire-alsa'     # Routes ALSA API through pipewire
+        'pipewire-pulse'    # Handles PulseAudio clients
+        'pipewire-jack'     # Handles JACK clients
         'bluez'                 # Daemons for the bluetooth protocol stack
         'bluez-utils'           # Bluetooth development and debugging utilities
-        'bluez-firmware'        # Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips
-        'blueberry'             # Bluetooth configuration tool
-        'pulseaudio-bluetooth'  # Bluetooth support for PulseAudio
-
-
+        'bluez-tools'        # Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips
 )
 
 for PKG in "${PKGS[@]}"; do

@@ -41,11 +41,10 @@ Clone into the .config folder in order to be able to make changes to it.
 Run the following scripts:
 
     $ ./1-graphical.sh
-    $ ./2-power-management.sh 
-    $ ./3-audio.sh 
-    $ ./4-network.s
-    $ ./5-software-pacman.sh
-    $ ./6-software-aur.sh
+    $ ./2-audio.sh 
+    $ ./3-network.s
+    $ ./4-software-pacman.sh
+    $ ./5-software-aur.sh
     $ ./setup.sh
     $ ./dotfiles-setup.sh
 
