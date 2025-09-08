@@ -25,6 +25,7 @@ PKGS=(
         'bluez-tools'        # Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips
 )
 
+sudo pacman -Syu
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING ${PKG}"
     sudo pacman -S "$PKG" --noconfirm --needed

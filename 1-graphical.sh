@@ -17,8 +17,10 @@ PKGS=(
         'swayidle'       # Handle system events
         'swaybg'       	 # Set background
         'lemurs'       	 # Display manager
+        'brightnessctl'	 # Display manager
 )
 
+sudo pacman -Syu
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo pacman -S "$PKG" --noconfirm --needed

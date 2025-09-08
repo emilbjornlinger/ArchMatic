@@ -13,31 +13,19 @@ echo "FINAL SETUP AND CONFIGURATION"
 # ------------------------------------------------------------------------
 
 # TO ADDRESS:
+echo "Install chezmoi"
 echo "Write sway config, then add to chezmoi"
-echo "Include swaylock and swayidle config:"
-#exec swayidle -w
-#	timeout 300 'swaylock -f -c 000000'
-#	before-sleep 'swaylock -f -c 000000'
 echo "Write lemurs config, then add to chezmoi"
-# Sound/bluetooth system config
-# Firewall config
-# Touchpad config
-# Dropbox/Dropbox autostart config
-# Librewolf
-# Nerdfont installation
-# Aliases (part of dotfiles?)
-# Neofetch, then add to chezmoi
-# feh alias, then add to chezmoi
-# wofi, then add to chezmoi
-
-# Generate file template
-## terminal using the "startx" command
-#cat <<EOF > ${HOME}/.<filename>
-##!/bin/bash
-#
-#<content>
-#
-#EOF
+echo "Write wpctl and bluetoothctl aliases, add to chezmoi"
+echo "Write neofetch config, add to chezmoi"
+echo "Install nerdfont, add to this config"
+echo "Write feh alias/config, add to chezmoi"
+echo "Write wofi config, add to chezmoi"
+echo "Import aliases, write new ones, add to chezmoi"
+echo "Write AUR install script"
+echo "Install AUR packages"
+echo "Write dropbox config, add to chezmoi if applicable"
+echo "Write librewolf config, add to chezmoi if applicable"
 
 # ------------------------------------------------------------------------
 
@@ -95,22 +83,13 @@ sudo systemctl enable --now bluetooth
 
 # ------------------------------------------------------------------------
 
-#echo
-#echo "Disabling Pulse .esd_auth module CHECK IF NEEDED"
-#
-## Pulse audio loads the `esound-protocol` module, which best I can tell is rarely needed.
-## That module creates a file called `.esd_auth` in the home directory which I'd prefer to not be there. So...
-#sudo sed -i 's|load-module module-esound-protocol-unix|#load-module module-esound-protocol-unix|g' /etc/pulse/default.pa
-#
-## ------------------------------------------------------------------------
-#
-#echo
-#echo "Enabling bluetooth daemon and setting it to auto-start CHECK IF NEEDED"
-#
-#sudo sed -i 's|#AutoEnable=false|AutoEnable=true|g' /etc/bluetooth/main.conf
-#sudo systemctl enable bluetooth.service
-#sudo systemctl start bluetooth.service
-#
+echo
+echo "Setup firewall with nftables"
+
+sudo systemctl enable --now nftables.service
+
+# ------------------------------------------------------------------------
+
 ## ------------------------------------------------------------------------
 #
 #echo
@@ -121,11 +100,7 @@ sudo systemctl enable --now bluetooth
 #sudo systemctl start ntpd.service
 #
 ## ------------------------------------------------------------------------
-#
-#echo
-#echo "NETWORK SETUP"
-#echo "TODO"
-#
+
 #echo
 #echo "Done!"
 #echo 

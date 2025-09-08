@@ -53,6 +53,7 @@ PKGS=(
     'wofi'                  # Application launcer for wayland
 )
 
+sudo pacman -Syu
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo pacman -S "$PKG" --noconfirm --needed

@@ -12,10 +12,10 @@ echo "INSTALLING NETWORK COMPONENTS"
 echo
 
 PKGS=(
-        'firewall'        # Firewall
-    	'gufw????'            # Firewall manager
+        'nftables'        # Firewall
 )
 
+sudo pacman -Syu
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING ${PKG}"
     sudo pacman -S "$PKG" --noconfirm --needed
