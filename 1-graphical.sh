@@ -8,12 +8,12 @@
 #-------------------------------------------------------------------------
 
 echo
-echo "INSTALLING XFCE"
+echo "INSTALLING Sway"
 echo
 
 PKGS=(
-        'xfce4'                 # XFCE Desktop
-        'xfce4-goodies'         # All the extras
+        'sway-things'           # sway-things
+        'driver-things'         # driver-things
 )
 
 for PKG in "${PKGS[@]}"; do

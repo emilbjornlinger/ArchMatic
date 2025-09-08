@@ -8,21 +8,26 @@
 #-------------------------------------------------------------------------
 
 echo
-echo "INSTALLING PRINTER DRIVERS"
+echo "INSTALLING AUR SOFTWARE"
 echo
 
+cd "${HOME}/build"
+
+
 PKGS=(
-    'cups'                  # Open source printer drivers
-    'cups-pdf'              # PDF support for cups
-    'ghostscript'           # PostScript interpreter
-    'gsfonts'               # Adobe Postscript replacement fonts
-    'hplip'                 # HP Drivers
-    'system-config-printer' # Printer setup  utility
+    # WEB -----------------------------------------------------------------
+
+    'librewolf'                   # Web browser
+
+
+    # UTILITIES -----------------------------------------------------------
+
+    'dropbox'                     # Cloud file storage
 )
 
 for PKG in "${PKGS[@]}"; do
-    echo "INSTALLING ${PKG}"
-    sudo pacman -S "$PKG" --noconfirm --needed
+    ./auric.sh -i $PKG
+    # TODO: Fix this install script
 done
 
 echo
