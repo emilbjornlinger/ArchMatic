@@ -5,9 +5,9 @@ This guide are the steps needed to do a base installation of Arch Linux and set 
 ---
 Follow the installation guide on the Arch wiki. During the arch-chroot session, install the following software before rebooting:
 
-- iwd
-    - Start/enable the iwd.service
-    - Create /etc/iwd/main.conf and put the following content in it:
+- `# pacman -S iwd`
+- Start/enable the iwd.service
+- Create /etc/iwd/main.conf and put the following content in it:
 
 "/etc/iwd/main.conf"
 ```
@@ -18,9 +18,9 @@ EnableNetworkConfiguration=true
 NameResolvingService=systemd
 ```
 
-    - Start/Enable the systemd-resolved.service
-    - Run `# rm /etc/resolv.conf && ln -s /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf`
-    - Connect to the internet using `$ iwctl`, see instructions on wiki page
+- Start/Enable the systemd-resolved.service
+- Run `# rm /etc/resolv.conf && ln -s /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf`
+- Connect to the internet using `$ iwctl`, see instructions on wiki page
 
 - vim
 - grub
@@ -53,5 +53,13 @@ NameResolvingService=systemd
     - `$ pacman -U <package-name>.pkg.tar.zst`
 
 **Note** Run checkrebuild command once in a while to see outdated packages that need to be rebuilt
+
+- Setup hibernation (specific for BIOS with MBR):
+- Find the UUID of the swap partition: `$ lsblk -f`
+- Edit "/etc/default/grub and add "resume=UUID=<UUID>" to the GRUB\_CMDLINE\_LINUX\_DEFAULT="" string, i.e. "loglevel=3 quiet resume=UUID=<UUID>"
+- Run `$ sudo grub-mkconfig -o /boot/grub/grub.cfg`
+- Edit "/etc/mkinitcpio.conf" and add "resume" after "udev" and before "filesystems" in the HOOKS=() entry
+- Regenerate `$ sudo mkninitcpio -P`
+- After a reboot the hibernation should work
 
 - Reboot
