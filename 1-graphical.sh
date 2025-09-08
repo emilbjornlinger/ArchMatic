@@ -12,8 +12,10 @@ echo "INSTALLING Sway"
 echo
 
 PKGS=(
-        'sway-things'           # sway-things
-        'driver-things'         # driver-things
+        'sway'           # Sway
+        'swaylock'       # Lock manager
+        'swaybg'       	 # Set background
+        'lemurs'       	 # Display manager
 )
 
 for PKG in "${PKGS[@]}"; do
