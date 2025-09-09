@@ -31,6 +31,7 @@ PKGS=(
     'less'                  # Needed for git diff
     'man'                   # View man pages
     'chezmoi'               # Manage dotfiles
+    'xdg-user-dirs'         # Get common directories
     
     # DEVELOPMENT ---------------------------------------------------------
 

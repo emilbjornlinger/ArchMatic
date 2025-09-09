@@ -13,15 +13,17 @@ echo "FINAL SETUP AND CONFIGURATION"
 # ------------------------------------------------------------------------
 
 # TO ADDRESS:
-echo "Install chezmoi"
+echo "Install chezmoi, DONE"
 echo "Write sway config, then add to chezmoi"
+	# borders, bar, color scheme, background
+echo "Import changes to nvim config from work computer, then add to chezmoi"
+echo "Import starship config from work computer, then add to chezmoi"
 echo "Write lemurs config, then add to chezmoi"
+echo "Write starship config, then add to chezmoi"
 echo "Write wpctl and bluetoothctl aliases, add to chezmoi"
-echo "Write neofetch config, add to chezmoi"
 echo "Install nerdfont JetBrains Mono Nerd Font, add to this config"
 echo "Write feh alias/config, add to chezmoi"
 echo "Write wofi config, add to chezmoi"
-echo "Import aliases, write new ones, add to chezmoi"
 echo "Write AUR install script"
 echo "Install AUR packages"
 echo "Write dropbox config, add to chezmoi if applicable"
@@ -87,6 +89,13 @@ echo
 echo "Setup firewall with nftables"
 
 sudo systemctl enable --now nftables.service
+
+# ------------------------------------------------------------------------
+
+echo
+echo "Create default user directories"
+
+xdg-user-dirs-update
 
 # ------------------------------------------------------------------------
 
