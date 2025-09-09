@@ -1,1 +1,3 @@
-# TODO: Install chezmoi and clone into your repo in order to get config files, then apply them in this script
+#!/usr/bin/env bash
+
+chezmoi init git@github.com:emilbjornlinger/dotfiles.git

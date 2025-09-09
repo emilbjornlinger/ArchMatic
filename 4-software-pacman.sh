@@ -17,7 +17,7 @@ PKGS=(
 
     'curl'                  # Remote content retrieval
     'htop'                  # System monitoring via terminal
-    'neofetch'              # Shows system info when you launch terminal
+    'fastfetch'             # Shows system info when you launch terminal
     'speedtest-cli'         # Internet speed via terminal
     'unrar'                 # RAR compression program
     'unzip'                 # Zip compression program
@@ -29,7 +29,9 @@ PKGS=(
     'ripgrep'               # Fuzzy file search
     'feh'                   # Image viewer
     'less'                  # Needed for git diff
-
+    'man'                   # View man pages
+    'chezmoi'               # Manage dotfiles
+    
     # DEVELOPMENT ---------------------------------------------------------
 
     'clang'                 # C Lang compiler
