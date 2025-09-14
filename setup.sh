@@ -162,15 +162,6 @@ esac
 echo
 echo "Setup dropbox"
 
-sudo systemctl enable dropbox@emil
-sudo mkdir /etc/systemd/system/dropbox@emil.service.d
-
-sudo bash -c 'cat <<EOF > /etc/systemd/system/dropbox@emil.service.d/override.conf
-[Service]
-Environment=DISPLAY=:0
-Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
-EOF'
-
 rm -rf ~/.dropbox-dist
 install -dm0 ~/.dropbox-dist
 
@@ -182,19 +173,8 @@ case $doit in
 esac
 # ------------------------------------------------------------------------
 
-## ------------------------------------------------------------------------
-#
-#echo
-#echo "Enabling Network Time Protocol so clock will be set via the network CHECK IF NEEDED""
-#
-#sudo ntpd -qg
-#sudo systemctl enable ntpd.service
-#sudo systemctl start ntpd.service
-#
-## ------------------------------------------------------------------------
-
-#echo
-#echo "Done!"
-#echo 
-#echo "Reboot now..."
-#echo
+echo
+echo "Done!"
+echo 
+echo "Reboot now..."
+echo
