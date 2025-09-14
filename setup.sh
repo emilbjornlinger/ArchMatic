@@ -15,13 +15,13 @@ echo "FINAL SETUP AND CONFIGURATION"
 # TO ADDRESS:
 echo "Install chezmoi, DONE"
 echo "Write sway config, then add to chezmoi, DONE"
-echo "Configure command line to have bigger font, add to chezmoi"
+echo "Configure command line to have bigger font, add to chezmoi, DONE"
 echo "Import changes to nvim config from work computer, then add to chezmoi, DONE"
 echo "Import starship config from work computer, then add to chezmoi, DONE"
-echo "Write lemurs config, then add to chezmoi"
-echo "Write starship config, then add to chezmoi"
-echo "Write wpctl and bluetoothctl aliases, add to chezmoi"
-echo "Install nerdfont JetBrains Mono Nerd Font, add to this config"
+echo "Write lemurs config, then add to chezmoi, DONE (won't do)"
+echo "Write starship config, then add to chezmoi, DONE"
+echo "Write wpctl and bluetoothctl aliases, add to chezmoi, DONE"
+echo "Install nerdfont JetBrains Mono Nerd Font, add to this config, DONE"
 echo "Install Rust, lua compilers/toolchains, add to this config"
 echo "Write feh alias/config, add to chezmoi"
 echo "Write wofi config, add to chezmoi"
@@ -98,6 +98,18 @@ echo
 echo "Create default user directories"
 
 xdg-user-dirs-update
+
+# ------------------------------------------------------------------------
+
+echo
+echo "Installing Jet Brains Mono Nerd Font"
+
+TEMP_DIR=$(mktemp -d)
+wget -O "$TEMP_DIR/font.zip" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip"
+unzip "$TEMP_DIR/font.zip" -d "$TEMP_DIR"
+sudo mv "$TEMP_DIR"/*.{ttf,otf} /usr/share/fonts/
+fc-cache -f -v
+rm -rf "$TEMP_DIR"
 
 # ------------------------------------------------------------------------
 
