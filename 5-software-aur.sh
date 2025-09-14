@@ -17,7 +17,8 @@ cd "${HOME}/build"
 PKGS=(
     # WEB -----------------------------------------------------------------
 
-    'librewolf'                   # Web browser
+    'xwayland-run'                # Dependency of librewolf
+    'librewolf-bin'               # Web browser
 
 
     # UTILITIES -----------------------------------------------------------
@@ -25,9 +26,13 @@ PKGS=(
     'dropbox'                     # Cloud file storage
 )
 
+sudo pacman -Syu
 for PKG in "${PKGS[@]}"; do
-    ./auric.sh -i $PKG
-    # TODO: Fix this install script
+    git clone https://aur.archlinux.org/"$PKG".git
+    cd "$PKG"
+    makepkg -src
+    sudo pacman -U "$PKG"*.pkg.tar.zst
+    cd ..
 done
 
 echo

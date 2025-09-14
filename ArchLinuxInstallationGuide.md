@@ -46,8 +46,7 @@ NameResolvingService=systemd
     - `$ cd && mkdir build && cd build`
     - `$ git clone https://aur.archlinux.org/rebuild-detector.git`
     - `$ cd rebuild-detector && makepkg -src`
-    - Look at the error message and search for the user-id using `$ gpg --search-keys <user-id>`
-    - Import the key with `$ gpg --receive-keys <key-id>`
+    - Look at the error message and search and import the key for the user-id using `$ gpg --search-keys <user-id>`
     - Then run `$ gpg --refresh-keys>`
     - `$ makepkg -src`
     - `$ pacman -U <package-name>.pkg.tar.zst`
