@@ -104,12 +104,59 @@ xdg-user-dirs-update
 echo
 echo "Installing Jet Brains Mono Nerd Font"
 
-TEMP_DIR=$(mktemp -d)
-wget -O "$TEMP_DIR/font.zip" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip"
-unzip "$TEMP_DIR/font.zip" -d "$TEMP_DIR"
-sudo mv "$TEMP_DIR"/*.{ttf,otf} /usr/share/fonts/
-fc-cache -f -v
-rm -rf "$TEMP_DIR"
+read -n1 -p "Install font? [y,n]" doit
+case $doit in
+    y|Y)
+        TEMP_DIR=$(mktemp -d)
+        wget -O "$TEMP_DIR/font.zip" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip"
+        unzip "$TEMP_DIR/font.zip" -d "$TEMP_DIR"
+        sudo mv "$TEMP_DIR"/*.{ttf,otf} /usr/share/fonts/
+        fc-cache -f -v
+        rm -rf "$TEMP_DIR"
+        ;;
+    *)
+        echo -e "\nSkipping installation of Jet Brains Mono Nerd Font"
+        ;;
+esac
+
+
+# ------------------------------------------------------------------------
+
+echo
+echo "Installing Rust"
+
+read -n1 -p "Install Rust? [y,n]" doit
+case $doit in
+    y|Y)
+        touch ~/.zshenv
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh 
+        ;;
+    *)
+        echo -e "\nSkipping installation of Rust"
+        ;;
+esac
+
+# ------------------------------------------------------------------------
+
+echo
+echo "Installing Lua"
+
+read -n1 -p "Install Lua? [y,n]" doit
+case $doit in
+    y|Y)
+        TEMP_DIR=$(mktemp -d)
+        cd "$TEMP_DIR"
+        curl -L -R -O https://www.lua.org/ftp/lua-5.4.8.tar.gz
+        tar zxf lua-5.4.8.tar.gz
+        cd lua-5.4.8
+        sudo make all install
+        cd ../..
+        rm -rf "$TEMP_DIR"
+        ;;
+    *)
+        echo -e "\nSkipping installation of Lua"
+        ;;
+esac
 
 # ------------------------------------------------------------------------
 
