@@ -40,30 +40,18 @@ Clone into the .config folder in order to be able to make changes to it.
 ### Run ArchMatic files
 Run the following scripts:
 
-    $ ./1-graphical.sh
-    $ ./2-audio.sh 
-    $ ./3-network.s
-    $ ./4-software-pacman.sh
-    $ ./5-software-aur.sh
-    $ ./setup.sh
-    $ ./dotfiles-setup.sh
+- `$ ./1-graphical.sh`
+- `$ ./2-audio.sh`
+- `$ ./3-network.sh`
+- `$ ./4-software-pacman.sh`
+- `$ ./5-software-aur.sh`
+- `$ ./setup.sh`
+- `$ ./dotfiles-setup.sh`
 
-**Note** The setup.sh file should contain all the setup that is done to the system so that it can be run several times in order to update the setup configuration. All other files should only install needed software.
+**Note** The setup.sh file contains all the setup done to the system. Can be run several times.
 
-**Note** The dotfiles-setup.sh can be run several times in order to apply the dotfiles from chezmoi, will do some type of setup TODO
+**Note** The dotfiles-setup.sh should be run once. The dotfiles are then managed using Chezmoi.
 
 ### Reboot
 
-`$ reboot`
-
-### Initialize Wayland/Window Manager:
-
-**TODO**
-
-At the terminal, run:
-
-`$ WHAT`
-
-On subsequent logins use:
-
-`$ WHAT`
+- `$ reboot`

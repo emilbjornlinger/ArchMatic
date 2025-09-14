@@ -12,26 +12,6 @@ echo "FINAL SETUP AND CONFIGURATION"
 
 # ------------------------------------------------------------------------
 
-# TO ADDRESS:
-echo "Install chezmoi, DONE"
-echo "Write sway config, then add to chezmoi, DONE"
-echo "Configure command line to have bigger font, add to chezmoi, DONE"
-echo "Import changes to nvim config from work computer, then add to chezmoi, DONE"
-echo "Import starship config from work computer, then add to chezmoi, DONE"
-echo "Write lemurs config, then add to chezmoi, DONE (won't do)"
-echo "Write starship config, then add to chezmoi, DONE"
-echo "Write wpctl and bluetoothctl aliases, add to chezmoi, DONE"
-echo "Install nerdfont JetBrains Mono Nerd Font, add to this config, DONE"
-echo "Install Rust, lua compilers/toolchains, add to this config, DONE"
-echo "Write swayimg alias/config, add to chezmoi, DONE"
-echo "Write wofi config, add to chezmoi, DONE"
-echo "Write AUR install script, DONE"
-echo "Install AUR packages, DONE"
-echo "Write dropbox config, add to chezmoi if applicable, DONE"
-echo "Set new background"
-
-# ------------------------------------------------------------------------
-
 echo
 echo "Adding user to seat and enabling seatd service"
 
