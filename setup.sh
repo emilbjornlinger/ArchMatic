@@ -14,20 +14,22 @@ echo "FINAL SETUP AND CONFIGURATION"
 
 # TO ADDRESS:
 echo "Install chezmoi, DONE"
-echo "Write sway config, then add to chezmoi"
-	# borders, bar, color scheme, background
-echo "Import changes to nvim config from work computer, then add to chezmoi"
-echo "Import starship config from work computer, then add to chezmoi"
+echo "Write sway config, then add to chezmoi, DONE"
+echo "Configure command line to have bigger font, add to chezmoi"
+echo "Import changes to nvim config from work computer, then add to chezmoi, DONE"
+echo "Import starship config from work computer, then add to chezmoi, DONE"
 echo "Write lemurs config, then add to chezmoi"
 echo "Write starship config, then add to chezmoi"
 echo "Write wpctl and bluetoothctl aliases, add to chezmoi"
 echo "Install nerdfont JetBrains Mono Nerd Font, add to this config"
+echo "Install Rust, lua compilers/toolchains, add to this config"
 echo "Write feh alias/config, add to chezmoi"
 echo "Write wofi config, add to chezmoi"
 echo "Write AUR install script"
 echo "Install AUR packages"
 echo "Write dropbox config, add to chezmoi if applicable"
 echo "Write librewolf config, add to chezmoi if applicable"
+echo "Set new background"
 
 # ------------------------------------------------------------------------
 
