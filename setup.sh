@@ -25,10 +25,9 @@ echo "Install nerdfont JetBrains Mono Nerd Font, add to this config, DONE"
 echo "Install Rust, lua compilers/toolchains, add to this config, DONE"
 echo "Write swayimg alias/config, add to chezmoi, DONE"
 echo "Write wofi config, add to chezmoi, DONE"
-echo "Write AUR install script"
-echo "Install AUR packages"
-echo "Write dropbox config, add to chezmoi if applicable"
-echo "Write librewolf config, add to chezmoi if applicable"
+echo "Write AUR install script, DONE"
+echo "Install AUR packages, DONE"
+echo "Write dropbox config, add to chezmoi if applicable, DONE"
 echo "Set new background"
 
 # ------------------------------------------------------------------------
@@ -158,6 +157,26 @@ case $doit in
         ;;
 esac
 
+# ------------------------------------------------------------------------
+
+echo
+echo "Setup dropbox"
+
+sudo systemctl enable dropbox@emil
+sudo mkdir /etc/systemd/system/dropbox@emil.service.d
+
+sudo bash -c 'cat <<EOF > /etc/systemd/system/dropbox@emil.service.d/override.conf
+[Service]
+Environment=DISPLAY=:0
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+EOF'
+
+read -n1 -p "Do start dropbox for the first time run 'dropbox start' and copy link to connect to computer. Then reboot and make sure the service is running and it is syncing. Press any key to continue [*]" doit
+case $doit in
+    *)
+        echo -e "\nContinuing"
+        ;;
+esac
 # ------------------------------------------------------------------------
 
 ## ------------------------------------------------------------------------
