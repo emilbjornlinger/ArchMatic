@@ -27,11 +27,11 @@ PKGS=(
     'ghostty'               # Terminal
     'starship'              # Starship shell
     'ripgrep'               # Fuzzy file search
-    'feh'                   # Image viewer
     'less'                  # Needed for git diff
     'man'                   # View man pages
     'chezmoi'               # Manage dotfiles
     'xdg-user-dirs'         # Get common directories
+    'swayimg'               # Image viewer
     
     # DEVELOPMENT ---------------------------------------------------------
 
