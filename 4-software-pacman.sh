@@ -42,7 +42,8 @@ PKGS=(
     # MEDIA ---------------------------------------------------------------
 
     'vlc'                   # Video player
-    'flameshot'   	    # Screenshot capture.
+    'flameshot'   	        # Screenshot capture.
+    'grim'   	            # Screen capture adapter
     'ffmpeg'   	    	    # Screen capture.
 
     # PRODUCTIVITY --------------------------------------------------------

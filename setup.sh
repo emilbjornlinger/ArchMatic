@@ -23,7 +23,7 @@ echo "Write starship config, then add to chezmoi, DONE"
 echo "Write wpctl and bluetoothctl aliases, add to chezmoi, DONE"
 echo "Install nerdfont JetBrains Mono Nerd Font, add to this config, DONE"
 echo "Install Rust, lua compilers/toolchains, add to this config, DONE"
-echo "Write feh alias/config, add to chezmoi"
+echo "Write swayimg alias/config, add to chezmoi, DONE"
 echo "Write wofi config, add to chezmoi"
 echo "Write AUR install script"
 echo "Install AUR packages"
@@ -48,10 +48,10 @@ echo "Enabling and configuring lemurs"
 sudo systemctl disable display-manager.service
 sudo systemctl enable lemurs.service
 
-sudo cat <<EOF > /etc/lemurs/wayland/sway
+sudo bash -c 'cat <<EOF > /etc/lemurs/wayland/sway
 #!/bin/bash
 exec sway
-EOF
+EOF'
 
 sudo chmod 755 /etc/lemurs/wayland/sway
 # ------------------------------------------------------------------------
