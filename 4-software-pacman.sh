@@ -49,6 +49,7 @@ PKGS=(
     # PRODUCTIVITY --------------------------------------------------------
 
     'zathura'               # PDF viewer
+    'zathura-pdf-mupdf'     # Zathura plugin
     'obsidian'              # Admin system
     'python-gpgme'          # Dependency for dropbox
 
