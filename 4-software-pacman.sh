@@ -51,6 +51,7 @@ PKGS=(
     'zathura'               # PDF viewer
     'zathura-pdf-mupdf'     # Zathura plugin
     'obsidian'              # Admin system
+    'obsidian-icon-theme'   # Obsidian icons
     'python-gpgme'          # Dependency for dropbox
 
     # APPLICATION LAUNCHER ------------------------------------------------
