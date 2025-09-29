@@ -140,6 +140,25 @@ esac
 # ------------------------------------------------------------------------
 
 echo
+echo "Installing Haskell"
+
+read -n1 -p "Install Haskell? [y,n]" doit
+case $doit in
+    y|Y)
+        TEMP_DIR=$(mktemp -d)
+        cd "$TEMP_DIR"
+        curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+        cd ..
+        rm -rf "$TEMP_DIR"
+        ;;
+    *)
+        echo -e "\nSkipping installation of Haskell"
+        ;;
+esac
+
+# ------------------------------------------------------------------------
+
+echo
 echo "Setup dropbox"
 
 rm -rf ~/.dropbox-dist
