@@ -32,6 +32,7 @@ PKGS=(
     'chezmoi'               # Manage dotfiles
     'xdg-user-dirs'         # Get common directories
     'swayimg'               # Image viewer
+    'wpa_supplicant'        # Key negotiation
     
     # DEVELOPMENT ---------------------------------------------------------
 
