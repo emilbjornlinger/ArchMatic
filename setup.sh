@@ -157,6 +157,20 @@ case $doit in
 esac
 
 # ------------------------------------------------------------------------
+echo
+echo "Installing LBNF TreeSitter"
+
+read -n1 -p "Install LBNF TreeSitter? [y,n]" doit
+case $doit in
+    y|Y)
+        git clone https://github.com/MortenSchou/tree-sitter-lbnf.git ~/build/tree-sitter-lbnf/
+        ;;
+    *)
+        echo -e "\nSkipping installation of LBNF TreeSitter"
+        ;;
+esac
+
+# ------------------------------------------------------------------------
 
 echo
 echo "Setup dropbox"
