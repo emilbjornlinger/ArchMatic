@@ -157,6 +157,7 @@ case $doit in
 esac
 
 # ------------------------------------------------------------------------
+
 echo
 echo "Installing LBNF TreeSitter"
 
