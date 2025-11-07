@@ -39,6 +39,7 @@ PKGS=(
     'clang'                 # C Lang compiler
     'cmake'                 # Cross-platform open-source make system
     'neovim'                # Editor
+    'jre21-openjdk'         # Running java apps
 
     # MEDIA ---------------------------------------------------------------
 
