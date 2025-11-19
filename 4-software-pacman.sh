@@ -33,6 +33,7 @@ PKGS=(
     'xdg-user-dirs'         # Get common directories
     'swayimg'               # Image viewer
     'wpa_supplicant'        # Key negotiation
+    'wl-clipboard'          # Clipboard
     
     # DEVELOPMENT ---------------------------------------------------------
 
