@@ -34,6 +34,7 @@ PKGS=(
     'swayimg'               # Image viewer
     'wpa_supplicant'        # Key negotiation
     'wl-clipboard'          # Clipboard
+    'iw'                    # Network information
     
     # DEVELOPMENT ---------------------------------------------------------
 
