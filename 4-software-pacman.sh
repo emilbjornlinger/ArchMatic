@@ -49,6 +49,7 @@ PKGS=(
     'flameshot'   	        # Screenshot capture.
     'grim'   	            # Screen capture adapter
     'ffmpeg'   	    	    # Screen capture.
+    'imagemagick'           # Handle images and pdfs
 
     # PRODUCTIVITY --------------------------------------------------------
 
