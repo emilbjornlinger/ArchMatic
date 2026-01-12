@@ -189,21 +189,6 @@ esac
 # ------------------------------------------------------------------------
 
 echo
-echo "Configuring ImageMagick"
-
-read -n1 -p "Configure ImageMagick to handle pdfs? [y,n]" doit
-case $doit in
-    y|Y)
-        name=$(find /etc/ImageMagick*/ -name "policy.xml")
-        sudo sed -i "`wc -l < "$name"`i\\  <policy domain=\"coder\" rights=\"read|write\" pattern=\"PDF\" />\\" "$name"
-        ;;
-    *)
-        echo -e "\nSkipping installation of Lua"
-        ;;
-esac
-# ------------------------------------------------------------------------
-
-echo
 echo "Done!"
 echo 
 echo "Reboot now..."
