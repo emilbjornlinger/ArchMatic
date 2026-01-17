@@ -189,6 +189,36 @@ esac
 # ------------------------------------------------------------------------
 
 echo
+echo "Setup Qobuz"
+
+
+read -n1 -p "Install and configure Qobuz? [y,n]" doit
+case $doit in
+    y|Y)
+        TEMP_DIR=$(mktemp -d)
+
+        wget -O "$TEMP_DIR/qobuz-linux.AppImage" "https://github.com/mattipunkt/qobuz-linux/releases/download/1.0.1-f15d602/qobuz-linux-1.0.1-f15d602.AppImage"
+        mv "$TEMP_DIR/qobuz-linux.AppImage" ~/.local/bin/
+        rm -rf "$TEMP_DIR"
+        cat << EOF > ~/.local/share/applications/qobuz.desktop
+        [Desktop Entry]
+        Name=Discord
+        Exec=/path/to/discord.appimage
+        Icon=/path/to/discord_icon.png
+        Terminal=false
+        Type=Application
+        Categories=Network;InstantMessaging;
+EOF
+        update-desktop-database ~/.local/share/applications
+        ;;
+    *)
+        echo -e "\nSkipping installation of Qobuz"
+        ;;
+esac
+
+# ------------------------------------------------------------------------
+
+echo
 echo "Done!"
 echo 
 echo "Reboot now..."
