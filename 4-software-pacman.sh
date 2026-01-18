@@ -50,6 +50,7 @@ PKGS=(
     'grim'   	            # Screen capture adapter
     'ffmpeg'   	    	    # Screen capture.
     'ghostscript'           # Handle pdfs
+    'spotify-launcher'      # Spotify
 
     # PRODUCTIVITY --------------------------------------------------------
 
