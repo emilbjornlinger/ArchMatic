@@ -23,11 +23,23 @@ PKGS=(
 
     # UTILITIES -----------------------------------------------------------
 
-    'dropbox'                     # Cloud file storage
+    'dropbox'                       # Cloud file storage
+    'python-nspektr'                # Calendar tui
+    'python-convertdate'            # Calendar tui
+    'python-hijridate'               # Calendar tui
+    'python-korean_lunar_calendar'  # Calendar tui
+    'python-holidays'               # Calendar tui
+    'python-jalali-core'            # Calendar tui
+    'python-jdatetime'              # Calendar tui
+    'calcure'                       # Calendar tui
 )
 
 sudo pacman -Syu
 for PKG in "${PKGS[@]}"; do
+    if [ -d "$PKG" ]; then 
+        echo "Package $PKG already installed in ~/build/"
+        continue
+    fi
     git clone https://aur.archlinux.org/"$PKG".git
     cd "$PKG"
     makepkg -src
