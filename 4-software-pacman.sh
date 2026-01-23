@@ -59,6 +59,9 @@ PKGS=(
     'obsidian'              # Admin system
     'obsidian-icon-theme'   # Obsidian icons
     'python-gpgme'          # Dependency for dropbox
+    'texlive-latex'         # Latex
+    'texlive-binextra'      # Latex additional packages
+    'texlive-langeuropean'  # Latex swedish
 
     # APPLICATION LAUNCHER ------------------------------------------------
 
