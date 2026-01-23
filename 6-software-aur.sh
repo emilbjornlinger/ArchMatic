@@ -11,9 +11,6 @@ echo
 echo "INSTALLING AUR SOFTWARE"
 echo
 
-cd "${HOME}/build"
-
-
 PKGS=(
     # WEB -----------------------------------------------------------------
 
@@ -24,27 +21,19 @@ PKGS=(
     # UTILITIES -----------------------------------------------------------
 
     'dropbox'                       # Cloud file storage
-    'python-nspektr'                # Calendar tui
-    'python-convertdate'            # Calendar tui
-    'python-hijridate'               # Calendar tui
-    'python-korean_lunar_calendar'  # Calendar tui
-    'python-holidays'               # Calendar tui
-    'python-jalali-core'            # Calendar tui
-    'python-jdatetime'              # Calendar tui
-    'calcure'                       # Calendar tui
+    'calcure'                       # TUI calendar
+    'zoom'                          # Zoom
 )
 
-sudo pacman -Syu
+yay -Syu
 for PKG in "${PKGS[@]}"; do
+    cd "${HOME}/build"
+    # TODO: Remove this check on fresh install and only use yay
     if [ -d "$PKG" ]; then 
         echo "Package $PKG already installed in ~/build/"
         continue
     fi
-    git clone https://aur.archlinux.org/"$PKG".git
-    cd "$PKG"
-    makepkg -src
-    sudo pacman -U "$PKG"*.pkg.tar.zst
-    cd ..
+    yay "$PKG"
 done
 
 echo

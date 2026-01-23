@@ -219,6 +219,46 @@ esac
 # ------------------------------------------------------------------------
 
 echo
+echo "Setup calcure"
+
+
+read -n1 -p "Update calcure config.ini file? [y,n]" doit
+case $doit in
+    y|Y)
+        REPLACEMENTS=(
+            'show_holidays = No','show_holidays'
+            'split_screen = No','split_screen'
+            'color_today = 1','color_today'
+            'color_events = 4','color_events'
+            'color_days = 7','color_days'
+            'color_day_names = 4','color_day_names'
+            'color_weekends = 5','color_weekends'
+            'color_weekend_names = 5','color_weekend_names'
+            'color_hints = 7','color_hints'
+            'color_prompts = 7','color_prompts'
+            'color_ics_calendars = 2,3,1,7,4,5,2,3,1,7','color_ics_calendars'
+            'bold_today = Yes','bold_today'
+            'bold_days = No','bold_days'
+            'bold_day_names = No','bold_day_names'
+            'bold_weekends = No','bold_weekends'
+            'bold_weekend_names = No','bold_weekend_names'
+            'bold_title = No','bold_title'
+        )
+
+        for pair in "${REPLACEMENTS[@]}"; do
+            IFS=",";
+            set -- $pair;
+            sed -i "s/^$2.*/$1/" "${XDG_CONFIG_HOME}/calcure/config.ini"
+        done
+        ;;
+    *)
+        echo -e "\nSkipping setup of calcure"
+        ;;
+esac
+
+# ------------------------------------------------------------------------
+
+echo
 echo "Done!"
 echo 
 echo "Reboot now..."

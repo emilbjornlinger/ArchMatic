@@ -44,7 +44,8 @@ Run the following scripts:
 - `$ ./2-audio.sh`
 - `$ ./3-network.sh`
 - `$ ./4-software-pacman.sh`
-- `$ ./5-software-aur.sh`
+- `$ ./5-yay.sh`
+- `$ ./6-software-aur.sh`
 - `$ ./setup.sh`
 - `$ ./dotfiles-setup.sh`
 
