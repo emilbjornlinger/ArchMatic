@@ -179,7 +179,7 @@ echo "Setup dropbox"
 rm -rf ~/.dropbox-dist
 install -dm0 ~/.dropbox-dist
 
-read -n1 -p "Do start dropbox for the first time run 'dropbox start' and copy link to connect to computer. Then reboot and make sure the service is running and it is syncing. Press any key to continue [*]" doit
+read -n1 -p "To start dropbox for the first time run 'dropbox start' and copy link to connect to computer. Then reboot and make sure the service is running and it is syncing. Press any key to continue [*]" doit
 case $doit in
     *)
         echo -e "\nContinuing"
@@ -255,6 +255,7 @@ case $doit in
         echo -e "\nSkipping setup of calcure"
         ;;
 esac
+echo "Remember to add your private .ics files to the config.ini file"
 
 # ------------------------------------------------------------------------
 
