@@ -22,7 +22,6 @@ PKGS=(
 
     'dropbox'                       # Cloud file storage
     'calcure'                       # TUI calendar
-    'zoom'                          # Zoom
 )
 
 yay -Syu

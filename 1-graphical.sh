@@ -12,12 +12,14 @@ echo "INSTALLING Sway"
 echo
 
 PKGS=(
-        'sway'           # Sway
-        'swaylock'       # Lock manager
-        'swayidle'       # Handle system events
-        'swaybg'       	 # Set background
-        'lemurs'       	 # Display manager
-        'brightnessctl'	 # Display manager
+        'sway'                   # Sway
+        'swaylock'               # Lock manager
+        'swayidle'               # Handle system events
+        'swaybg'       	         # Set background
+        'lemurs'       	         # Display manager
+        'brightnessctl'	         # Display manager
+        'xdg-desktop-portal'     # Screen sharing
+        'xdg-desktop-portal-wlr' # Screen sharing
 )
 
 sudo pacman -Syu
