@@ -20,9 +20,10 @@ PKGS=(
         'pipewire-alsa'     # Routes ALSA API through pipewire
         'pipewire-pulse'    # Handles PulseAudio clients
         'pipewire-jack'     # Handles JACK clients
-        'bluez'                 # Daemons for the bluetooth protocol stack
-        'bluez-utils'           # Bluetooth development and debugging utilities
-        'bluez-tools'        # Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips
+        'bluez'             # Daemons for the bluetooth protocol stack
+        'bluez-utils'       # Bluetooth development and debugging utilities
+        'bluez-tools'       # Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips
+        'sof-firmware'      # Troubleshooting for sound control disappearing/breaking
 )
 
 sudo pacman -Syu
