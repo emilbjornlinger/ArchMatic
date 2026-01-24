@@ -260,6 +260,22 @@ echo "Remember to add your private .ics files to the config.ini file"
 # ------------------------------------------------------------------------
 
 echo
+echo "Install treesitter cli"
+
+
+read -n1 -p "Install treesitter cli? [y,n]" doit
+case $doit in
+    y|Y)
+        cargo install --locked tree-sitter-cli --version 0.25.8 --force
+        ;;
+    *)
+        echo -e "\nSkipping installation of treesitter cli"
+        ;;
+esac
+
+# ------------------------------------------------------------------------
+
+echo
 echo "Done!"
 echo 
 echo "Reboot now..."

@@ -42,6 +42,7 @@ PKGS=(
     'cmake'                 # Cross-platform open-source make system
     'neovim'                # Editor
     'jre21-openjdk'         # Running java apps
+    'nodejs'                # Needed for neovim plugins
 
     # MEDIA ---------------------------------------------------------------
 
