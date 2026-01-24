@@ -35,6 +35,7 @@ PKGS=(
     'wpa_supplicant'        # Key negotiation
     'wl-clipboard'          # Clipboard
     'iw'                    # Network information
+    'dua-cli'               # Disk usage information
     
     # DEVELOPMENT ---------------------------------------------------------
 
@@ -42,7 +43,6 @@ PKGS=(
     'cmake'                 # Cross-platform open-source make system
     'neovim'                # Editor
     'jre21-openjdk'         # Running java apps
-    'nodejs'                # Needed for neovim plugins
 
     # MEDIA ---------------------------------------------------------------
 
