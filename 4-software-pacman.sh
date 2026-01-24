@@ -55,14 +55,21 @@ PKGS=(
 
     # PRODUCTIVITY --------------------------------------------------------
 
-    'zathura'               # PDF viewer
-    'zathura-pdf-mupdf'     # Zathura plugin
-    'obsidian'              # Admin system
-    'obsidian-icon-theme'   # Obsidian icons
-    'python-gpgme'          # Dependency for dropbox
-    'texlive-latex'         # Latex
-    'texlive-binextra'      # Latex additional packages
-    'texlive-langeuropean'  # Latex swedish
+    'zathura'                   # PDF viewer
+    'zathura-pdf-mupdf'         # Zathura plugin
+    'obsidian'                  # Admin system
+    'obsidian-icon-theme'       # Obsidian icons
+    'python-gpgme'              # Dependency for dropbox
+    'texlive-latex'             # Latex
+    'texlive-latexextra'        # Latex
+    'texlive-latexrecommended'  # Latex
+    'texlive-binextra'          # Latex additional packages
+    'texlive-langeuropean'      # Latex swedish
+    'texlive-mathscience'       # Sciency latex
+    'texlive-bibtexextra'       # Bibtex
+    'texlive-plaingeneric'      # Bibtex
+    'biber'                     # BibLaTeX
+    'libxcrypt-compat'          # Needed for latexindent
 
     # APPLICATION LAUNCHER ------------------------------------------------
 
