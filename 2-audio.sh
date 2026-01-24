@@ -23,6 +23,7 @@ PKGS=(
         'bluez'             # Daemons for the bluetooth protocol stack
         'bluez-utils'       # Bluetooth development and debugging utilities
         'bluez-tools'       # Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips
+        'sof-firmware'      # Troubleshooting for sound control disappearing/breaking
 )
 
 sudo pacman -Syu
