@@ -285,10 +285,10 @@ case $doit in
         cd /home/emil/code/rust
         git clone ssh://git@codeberg.org/ebjorn/cal_helpers.git
         cat << EOF > ~/.local/bin/cal_helpers.sh
-        #!/bin/bash
-        cd /home/emil/code/rust/cal_helpers
-        cargo run --bin deadlines
-        cargo run --bin events
+#!/bin/bash
+cd /home/emil/code/rust/cal_helpers
+/home/emil/.cargo/bin/cargo run --bin deadlines
+/home/emil/.cargo/bin/cargo run --bin events
 EOF
         chmod +x /home/emil/.local/bin/cal_helpers.sh
 
