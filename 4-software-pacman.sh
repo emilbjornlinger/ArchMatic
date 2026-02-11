@@ -36,6 +36,7 @@ PKGS=(
     'wl-clipboard'          # Clipboard
     'iw'                    # Network information
     'dua-cli'               # Disk usage information
+    'cronie'                # Cron jobs
     
     # DEVELOPMENT ---------------------------------------------------------
 
@@ -43,6 +44,7 @@ PKGS=(
     'cmake'                 # Cross-platform open-source make system
     'neovim'                # Editor
     'jre21-openjdk'         # Running java apps
+    'boost'                 # C++ library development headers
 
     # MEDIA ---------------------------------------------------------------
 

@@ -260,6 +260,53 @@ echo "Remember to add your private .ics files to the config.ini file"
 # ------------------------------------------------------------------------
 
 echo
+echo "Setup cronie"
+
+read -n1 -p "Enable and start cronie system service? [y,n]" doit
+case $doit in
+    y|Y)
+        sudo systemctl enable --now cronie.service
+        ;;
+    *)
+        echo -e "\nSkipping setup of cronie"
+        ;;
+esac
+
+# ------------------------------------------------------------------------
+
+echo
+echo "Setup cal_helpers"
+
+
+read -n1 -p "Configure cal_helpers and cron jobs? [y,n]" doit
+case $doit in
+    y|Y)
+        mkdir -p /home/emil/code/rust
+        cd /home/emil/code/rust
+        git clone ssh://git@codeberg.org/ebjorn/cal_helpers.git
+        cat << EOF > ~/.local/bin/cal_helpers.sh
+        #!/bin/bash
+        cd /home/emil/code/rust/cal_helpers
+        cargo run --bin deadlines
+        cargo run --bin events
+EOF
+        chmod +x /home/emil/.local/bin/cal_helpers.sh
+
+        read -n1 -p "After the script run crontab -e and enter two lines: 'MAILTO=''' and '0 * * * * /home/emil/.local/bin/cal_helpers.sh' to activate cronjob for syncing calendar sources to dropbox [*]" doit
+        case $doit in
+            *)
+                echo -e "\nContinuing"
+                ;;
+        esac
+        ;;
+    *)
+        echo -e "\nSkipping setup of cal_helpers"
+        ;;
+esac
+
+# ------------------------------------------------------------------------
+
+echo
 echo "Done!"
 echo 
 echo "Reboot now..."
