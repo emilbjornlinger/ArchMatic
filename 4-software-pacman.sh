@@ -37,6 +37,7 @@ PKGS=(
     'iw'                    # Network information
     'dua-cli'               # Disk usage information
     'cronie'                # Cron jobs
+    'yazi'                  # Terminal file manager
     
     # DEVELOPMENT ---------------------------------------------------------
 
