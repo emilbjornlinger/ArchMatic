@@ -307,6 +307,22 @@ esac
 # ------------------------------------------------------------------------
 
 echo
+echo "Setup markwhen cli"
+
+
+read -n1 -p "Configure markwhen cli? [y,n]" doit
+case $doit in
+    y|Y)
+        sudo npm i -g @markwhen/mw
+        ;;
+    *)
+        echo -e "\nSkipping setup of markwhen cli"
+        ;;
+esac
+
+# ------------------------------------------------------------------------
+
+echo
 echo "Done!"
 echo 
 echo "Reboot now..."

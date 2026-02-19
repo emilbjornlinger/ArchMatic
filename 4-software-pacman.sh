@@ -46,6 +46,7 @@ PKGS=(
     'neovim'                # Editor
     'jre21-openjdk'         # Running java apps
     'boost'                 # C++ library development headers
+    'npm'                   # Node package manager
 
     # MEDIA ---------------------------------------------------------------
 
@@ -55,6 +56,7 @@ PKGS=(
     'ffmpeg'   	    	    # Screen capture.
     'ghostscript'           # Handle pdfs
     'spotify-launcher'      # Spotify
+    'gimp'                  # Image manipulation tool
 
     # PRODUCTIVITY --------------------------------------------------------
 
