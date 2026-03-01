@@ -1,5 +1,7 @@
 # Arch Linux Post Installation Setup and Config Scripts
 
+## This repo has been moved to Codeberg: https://codeberg.org/ebjorn/ArchMatic
+
 ### System Description
 I run sway with lemurs as a login manager.
 
